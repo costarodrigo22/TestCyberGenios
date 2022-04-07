@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Projeto iniciado com Create React App
+Projeto referente a última etapa para vaga de Front End júnior da empresa Cyber Gênios.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tecnologias usadas
+## CRA -> Create React App
+Trata-se de uma ferramenta mantida e criada pelo Facebook que serve para inicializar um
+projeto React todo configurado para que não seja necessário a configuração de Babel,
+Webpack, louders, etc.
 
-## Available Scripts
+## Gerenciador de pacotes Yarn
+Foi usado Yarn para criação e gerenciamento dos pacotes usados na aplicação.
 
-In the project directory, you can run:
+## Editor config e ESlint
+São ferramentas que servem para padronização do código, com por exemplo, colocar ';'
+ao final de cada linha de código, usar '' ao invés de "" e gerenciar algumas regras.
 
-### `yarn start`
+## Styled-components -> ferramenta de estilização
+É uma ferramenta que chamamos de css in js, ou seja, css dentro do javascript.
+Facilita a legibilidade, tem scoped por padrão, trabalha com props, dá para reutilizar
+os componentes em outros pontos da aplicação.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Styled-components -> ThemeProvider
+Usando o themeProvider facilita o desenvolvimento do projeto que ultiliza um styleguide
+e também facilita a manutenção do código, em caso de modificações muito grandes (e até mesmo
+pequenas) basta modificar os elementos lá no arquivo de theme onde está centralizado todas
+as informações de estilo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Componentização
+O projeto está dividido em um componente pai, e outros três filhos. Cada componente encontra-se
+em uma pasta nomeada com dois arquivos, um index.js que representa a lógica e estruturação da
+página e um styled.js onde ficam as estilizações daquele componente. Foi criado um arquivo de estilo
+global onde coloquei estilos default entre os arquivos.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Hooks
+Foram ultilizados os React Hooks na renderização do menu quando está no estilo mobile ou desktop.
+Foi necessário o uso do useState que é um hook de estado que retorna um array com duas posições, na
+primeira posição está o valor do estado e na segunda uma função que modifica este valor na primeira
+posição do array. O estado inicia como false e de acordo com o clique do usuário este valor vai alternando
+entre true e false (aberto ou fechado).
